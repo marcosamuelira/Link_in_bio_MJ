@@ -1,0 +1,116 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --branco: #ffffff;
+    --cinza-claro: #d2d1cb;
+    --preto: #000000;
+    --azul-link: #1a73e8;
+}
+
+/* Body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cinza-claro);
+}
+
+/* Main */
+main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1.rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Links principais */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.links a {
+    display: block;
+    padding: 12px 0;
+    background-color: var(--azul-link);
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.links a:hover {
+    background-color: #1558b0;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+footer a img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+footer a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    footer a img {
+        width: 30px;
+        height: 30px;
+    }
+}
